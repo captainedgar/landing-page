@@ -13,31 +13,30 @@
 
 <body class="bg-gray-100">
 
-  <!-- Header / Menú de navegación -->
-  <header >
-     
-    <nav class="bg-[#252525] text-white p-4 flex justify-center">
-     <div class="mr-20">
-       <img src="img/logo.png" alt="logo" class="w-16 h-16"/>
-      </div>
-      <ul class="flex  space-x-6 mt-5">
-        <li><a href="#inicio" class="block hover:text-[#FF4500] transition-transform duration-300 hover:scale-110">Inicio</a></li>
-        <li><a href="#servicios" class="block hover:text-[#FF4500] transition-transform duration-300 hover:scale-110">Servicios</a></li>
-        <li><a href="#entrenadores" class="block hover:text-[#FF4500] transition-transform duration-300 hover:scale-110">Entrenadores</a></li>
-        <li><a href="#testimonios" class="block hover:text-[#FF4500] transition-transform duration-300 hover:scale-110">Testimonios</a></li>
-        <li><a href="#galeria" class="block hover:text-[#FF4500] transition-transform duration-300 hover:scale-110">Galería</a></li>
-        <li><a href="#contacto" class="block hover:text-[#FF4500] transition-transform duration-300 hover:scale-110">Contacto</a></li>
+  <!-- Header / Menú -->
+  <header class="w-full">
+    <nav class="bg-[#252525] text-white p-4 flex justify-between items-center max-w-[1400px] mx-auto">
+      <img src="img/logo.png" alt="logo" class="w-14 h-14"/>
+
+      <!-- Menu Desktop -->
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="#inicio" class="hover:text-[#FF4500] transition">Inicio</a></li>
+        <li><a href="#servicios" class="hover:text-[#FF4500] transition">Servicios</a></li>
+        <li><a href="#entrenadores" class="hover:text-[#FF4500] transition">Entrenadores</a></li>
+        <li><a href="#testimonios" class="hover:text-[#FF4500] transition">Testimonios</a></li>
+        <li><a href="#galeria" class="hover:text-[#FF4500] transition">Galería</a></li>
+        <li><a href="#contacto" class="hover:text-[#FF4500] transition">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Sección Hero -->
- <section id="inicio" class="bg-[#252525] text-white flex items-center justify-between px-20 py-16">
-  
-  <!-- 🧱 Columna izquierda (texto) -->
-  <div class="max-w-lg">
-    <div class="flex items-center">
-      <div class="w-[80px] h-[2px] bg-[#FF4500]"></div>
+  <!-- HERO -->
+<section id="inicio" class="bg-[#252525] text-white flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-16 max-w-[1400px] mx-auto">
+
+  <!-- Texto -->
+  <div class="max-w-lg text-center md:text-left">
+    <div class="flex items-center justify-center md:justify-start">
+      <div class="w-[60px] h-[2px] bg-[#FF4500]"></div>
       <span class="px-2 text-[#FF4500] text-[10px]">CAPITAN EDGAR</span>
     </div>
 
@@ -48,164 +47,232 @@
     </p>
 
     <a href="#contacto"
-       class="inline-block mt-6  bg-[#FF4500] text-white font-semibold  py-3 px-8 rounded-lg hover:bg-red-700 transition-colors duration-300">
+       class="inline-block mt-6 bg-[#FF4500] text-white font-semibold py-3 px-8 rounded-lg hover:bg-red-700 transition">
        Empieza hoy
     </a>
   </div>
 
-  <!-- 🖼️ Columna derecha (imagen) -->
-  <div class="flex justify-end">
-    <img src="img/hero-img.png" alt="Personas entrenando en el gimnasio" class="w-[550px] h-auto">
+  <!-- Imagen -->
+  <div class="flex justify-center mt-10 md:mt-0">
+    <img src="img/hero-img.png" alt="Hero" class="w-full max-w-[350px] md:max-w-[500px]">
   </div>
 
 </section>
 
+  <!-- SERVICIOS -->
+<section id="servicios" class="bg-[#252525] text-white max-w-[1400px] mx-auto py-16 px-6">
 
-  <!-- Sección de Servicios -->
-  <section id="servicios" class="bg-[#252525] text-white ">
-    <h2 class="text-[24px] font-bold uppercase text-center mb-4">Nuestros entrenadores personales <br>pueden ofrecer los siguientes servicios</h2>
+  <h2 class="text-[24px] font-bold uppercase text-center mb-10">Nuestros entrenadores personales pueden ofrecer los siguientes servicios</h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
     
-    <div class="flex flex-col md:flex-row justify-center items-center">
-      <article class="border-2 border-[#0BA1FF]  py-10 px-4 m-12 flex flex-col items-center">
-        <div class="bg-[#0BA1FF] rounded-full w-20 h-20 flex flex-col items-center justify-center"   ><img src="img/mancuernas.png"/></div>
-        <h3 class="text-[20px] mt-4 font-bold text-center" >Entrenamiento Personal</h3>
-        <p class="text-center text-[12px] mt-2">Plan adaptado a tus metas, con seguimiento de progreso y asesoría continua.</p>
-      </article>
-      <article class="border-2 border-[#FFC505] py-10 px-6 m-12 flex flex-col items-center">
-        <div class="bg-[#FFC505] rounded-full w-20 h-20 flex flex-col items-center justify-center"   ><img src="img/clase-grupal.png"/></div>
-        <h3 class="text-[20px] mt-4 font-bold text-center">Entrenamientos Clases Grupales</h3>
-        <p class="text-center text-[12px] mt-2">Motívate con nuestras clases de cardio, spinning, yoga, zumba y más.</p>
-      </article>
-      <article class="border-2 border-[#05FB3A] py-10 px-4 m-12 flex flex-col items-center">
-        <div class="bg-[#05FB3A] rounded-full w-20 h-20 flex flex-col items-center justify-center"   ><img src="img/nutricion.png"/></div>
-        <h3 class="text-[20px] mt-4 font-bold text-center">Nutrición<br> Deportiva</h3>
-        <p class="text-center text-[12px] mt-2">Recibe orientación nutricional para complementar tu rutina de entrenamiento.</p>
-      </article>
-       <article class="border-2 border-[#FF0A0A] py-10 px-2 m-12 flex flex-col items-center">
-        <div class="bg-[#FF0A0A] rounded-full w-20 h-20 flex flex-col items-center justify-center"   ><img src="img/learning-online.png"/></div>
-        <h3 class="text-[20px] mt-4 font-bold text-center">Entrenamiento <br>Online</h3>
-        <p class="text-center text-[12px] mt-2">Accede a rutinas virtuales, planes personalizados y seguimiento desde tu app o página web.</p>
-      </article>
-    </div>
-  </section>
+    <article class="border-2 border-[#0BA1FF] py-10 px-4 flex flex-col items-center text-center">
+      <div class="bg-[#0BA1FF] rounded-full w-20 h-20 flex items-center justify-center">
+        <img src="img/mancuernas.png"/>
+      </div>
+      <h3 class="text-[20px] mt-4 font-bold">Entrenamiento Personal</h3>
+      <p class="text-[12px] mt-2">Plan adaptado a tus metas con seguimiento continuo.</p>
+    </article>
 
-  <!-- Sección de Entrenadores -->
+    <article class="border-2 border-[#FFC505] py-10 px-4 flex flex-col items-center text-center">
+      <div class="bg-[#FFC505] rounded-full w-20 h-20 flex items-center justify-center">
+        <img src="img/clase-grupal.png"/>
+      </div>
+      <h3 class="text-[20px] mt-4 font-bold">Clases Grupales</h3>
+      <p class="text-[12px] mt-2">Cardio, spinning, yoga, zumba y más.</p>
+    </article>
 
+    <article class="border-2 border-[#05FB3A] py-10 px-4 flex flex-col items-center text-center">
+      <div class="bg-[#05FB3A] rounded-full w-20 h-20 flex items-center justify-center">
+        <img src="img/nutricion.png"/>
+      </div>
+      <h3 class="text-[20px] mt-4 font-bold">Nutrición Deportiva</h3>
+      <p class="text-[12px] mt-2">Orientación nutricional para complementar tu rutina.</p>
+    </article>
 
+    <article class="border-2 border-[#FF0A0A] py-10 px-4 flex flex-col items-center text-center">
+      <div class="bg-[#FF0A0A] rounded-full w-20 h-20 flex items-center justify-center">
+        <img src="img/learning-online.png"/>
+      </div>
+      <h3 class="text-[20px] mt-4 font-bold">Entrenamiento Online</h3>
+      <p class="text-[12px] mt-2">Rutinas virtuales y seguimiento desde la web o app.</p>
+    </article>
 
-<section id="inicio" class="bg-[#252525] text-white flex  justify-between px-20 py-16">
-   <!-- 🖼️ Columna derecha (imagen) -->
-  <div class="">
-    <img src="img/final-desing.png" alt="Personas entrenando en el gimnasio" class="w-[450px] h-[auto] ml-12">
   </div>
-  <!-- 🧱 Columna izquierda (texto) -->
-  <div class="max-w-lg">
-    <div class="flex items-center">
-      <div class="w-[80px] h-[2px] bg-[#FF4500] mb-10"></div>
-      <span class="px-2 text-[#FF4500] text-[10px] mb-10">HELLO! I'M SUPER PATRICK</span>
-    </div>
-
-    <h2 class="text-3xl font-bold ">PERSONAL TRAINER <br> DESPIERTA! ES HORA DE ENTRENAR</h2>
-
-    <p class="mt-6 mb-6 text-gray-300">
-     Hola, me llamo Patrick y soy un apasionado profesional de la salud, el fitness y el bienestar integral. Cuento con años de experiencia ayudando a personas de todas las edades y niveles a transformar su cuerpo, ganar confianza y adoptar un estilo de vida más saludable.
-    </p>
- <p class="mt-6 mb-6 text-gray-300">
-    Mis programas de entrenamiento están diseñados para adaptarse a tus necesidades específicas: ya sea que quieras perder esos kilos de más, tonificar tus músculos, mejorar tu postura o simplemente sentirte con más energía cada día. Trabajo con un enfoque personalizado, combinando ejercicios funcionales, fuerza, resistencia y movilidad para lograr resultados reales y sostenibles.
-  </p>
-
-  <p class="mt-6 mb-6 text-gray-300">
-   No se trata solo de entrenar el cuerpo, sino también de fortalecer la mente y crear hábitos que te acompañen toda la vida. ¡Con mi programa te revitalizarás por completo y descubrirás la mejor versión de ti mismo!
-  </p>
-    <a href="#contacto"
-       class="inline-block mt-6  bg-[#FF4500] text-white font-semibold  py-3 px-8 rounded-lg hover:bg-red-700 transition-colors duration-300">
-       Empieza hoy
-    </a>
-  </div>
-
- 
 
 </section>
 
+  <!-- ENTRENADOR -->
+<section id="entrenadores" class="bg-[#252525] text-white flex flex-col md:flex-row justify-between px-6 md:px-20 py-16 max-w-[1400px] mx-auto">
 
+  <!-- Imagen -->
+  <div class="flex justify-center mb-10 md:mb-0">
+    <img src="img/final-desing.png" alt="Trainer" class="w-full max-w-[350px] md:max-w-[450px]">
+  </div>
 
-  <section id="services">
-   <div class=" flex justify-center">
-<img class="w-full" src="./img/banner-services.png"/>
-<div class=" bg-red-700  absolute flex items-center justify-center h-[40%] w-[50%]">
-  <h2 class="text-[#ffffff] text-[30px] text-center font-bold">OFRECEMOS MÁS DE 35 CLASES DE EJERCICIO <br> AERÓBICO EN GRUPO CADA SEMANA </h2>
-</div>
-   </div>
-
-   <div>
-
-   </div>
-  </section>
-
-  <!-- Sección de Testimonios -->
-  <section id="testimonios">
-    <h2>Lo que dicen nuestros miembros</h2>
-    <div class="testimonios-container">
-      <article>
-        <blockquote>
-          “Gracias a TuGimnasio logré perder 10 kg y ganar masa muscular. ¡Recomendado al 100%!”
-        </blockquote>
-        <p>- Ana Rodríguez</p>
-      </article>
-      <article>
-        <blockquote>
-          “El ambiente es increíble y los entrenadores te motivan cada día.”
-        </blockquote>
-        <p>- Juan López</p>
-      </article>
+  <!-- Texto -->
+  <div class="max-w-lg text-center md:text-left">
+    <div class="flex items-center justify-center md:justify-start">
+      <div class="w-[80px] h-[2px] bg-[#FF4500]"></div>
+      <span class="px-2 text-[#FF4500] text-[10px]">HELLO! I'M SUPER PATRICK</span>
     </div>
-  </section>
 
-  <!-- Sección de Galería -->
-  <section id="galeria">
-    <h2>Galería</h2>
-    <p>Conoce nuestras instalaciones y el ambiente que te espera.</p>
-    <div class="galeria-grid">
-      <img src="images/gym1.jpg" alt="Área de pesas">
-      <img src="images/gym2.jpg" alt="Zona de cardio">
-      <img src="images/gym3.jpg" alt="Sala de clases grupales">
-      <img src="images/gym4.jpg" alt="Zona de entrenamiento funcional">
+    <h2 class="text-3xl font-bold mt-4">PERSONAL TRAINER<br>ES HORA DE ENTRENAR</h2>
+
+    <p class="mt-6 text-gray-300">Hola, soy Patrick, profesional del fitness con años de experiencia ayudando a personas a transformar su cuerpo y su mente.</p>
+
+    <p class="mt-4 text-gray-300">Mis entrenamientos se adaptan a tus necesidades: bajar de peso, tonificar, mejorar postura, ganar energía y más.</p>
+
+    <p class="mt-4 text-gray-300">Entrenamos cuerpo y mente para lograr hábitos sostenibles.</p>
+
+    <a href="#contacto" class="inline-block mt-6 bg-[#FF4500] py-3 px-8 rounded-lg hover:bg-red-700 transition">
+      Empieza hoy
+    </a>
+  </div>
+
+</section>
+
+  <!-- TESTIMONIOS -->
+<section id="testimonios" class="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 px-6 py-16 max-w-[1400px] mx-auto">
+
+  <!-- CARD -->
+  <div class="relative h-[380px] overflow-hidden">
+    <img src="img/health-caring.png" class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+      <div class="bg-[#FF4500] rounded-full w-20 h-20 flex items-center justify-center mb-3">
+        <img src="img/mancuernas.png"/>
+      </div>
+      <h3 class="text-white font-bold text-xl">HEALTH CARING</h3>
+      <p class="text-white text-sm mt-2">We have fun programs to push your body to the next level.</p>
     </div>
-  </section>
+  </div>
 
-  <!-- Sección de Contacto / Formulario -->
-  <section id="contacto">
-    <h2>Contáctanos</h2>
-    <p>Agenda tu clase gratuita o solicita más información.</p>
-    <form action="enviar.php" method="POST">
-      <label for="nombre">Nombre completo</label>
-      <input type="text" id="nombre" name="nombre" required>
+  <!-- CARD -->
+  <div class="relative h-[380px] overflow-hidden">
+    <img src="img/puch-boxing.png" class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+      <div class="bg-[#FF4500] rounded-full w-20 h-20 flex items-center justify-center mb-3">
+        <img src="img/boxing-gloves.png"/>
+      </div>
+      <h3 class="text-white font-bold text-xl">PUNCH BOXING</h3>
+      <p class="text-white text-sm mt-2">Strength, power and full explosive routines.</p>
+    </div>
+  </div>
 
-      <label for="email">Correo electrónico</label>
-      <input type="email" id="email" name="email" required>
+  <!-- CARD -->
+  <div class="relative h-[380px] overflow-hidden">
+    <img src="img/yoga-athletic.png" class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+      <div class="bg-[#FF4500] rounded-full w-20 h-20 flex items-center justify-center mb-3">
+        <img src="img/yoga.png"/>
+      </div>
+      <h3 class="text-white font-bold text-xl">YOGA ATHLETIC</h3>
+      <p class="text-white text-sm mt-2">Balance, fuerza y flexibilidad en cada sesión.</p>
+    </div>
+  </div>
 
-      <label for="telefono">Teléfono</label>
-      <input type="tel" id="telefono" name="telefono" required>
+  <!-- CARD -->
+  <div class="relative h-[380px] overflow-hidden">
+    <img src="img/zumba-athletic.png" class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+      <div class="bg-[#FF4500] rounded-full w-20 h-20 flex items-center justify-center mb-3">
+        <img src="img/zumba.png"/>
+      </div>
+      <h3 class="text-white font-bold text-xl">ZUMBA</h3>
+      <p class="text-white text-sm mt-2">Energía, ritmo y diversión asegurada.</p>
+    </div>
+  </div>
 
-      <label for="mensaje">Mensaje</label>
-      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+</section>
 
-      <button type="submit">Enviar</button>
+  <!-- GALERÍA -->
+<section id="galeria" class="py-16 bg-[#252525] px-6">
+  <div class="max-w-6xl mx-auto">
+
+    <h2 class="text-[#FF4500] text-4xl font-bold text-center mb-4">Galería</h2>
+    <p class="text-center text-gray-300 mb-10">
+      Conoce nuestras instalaciones y el ambiente que te espera.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+      <div class="overflow-hidden rounded-xl">
+        <img src="img/yoga-athletic.png" class="w-full h-56 object-cover hover:scale-110 transition">
+      </div>
+
+      <div class="overflow-hidden rounded-xl">
+        <img src="img/galeria-2.jpg" class="w-full h-56 object-cover hover:scale-110 transition">
+      </div>
+
+      <div class="overflow-hidden rounded-xl">
+        <img src="img/galeria-3.jpg" class="w-full h-56 object-cover hover:scale-110 transition">
+      </div>
+
+      <div class="overflow-hidden rounded-xl">
+        <img src="img/galeria-4.avif" class="w-full h-56 object-cover hover:scale-110 transition">
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+  <!-- CONTACTO -->
+<section id="contacto" class="py-16 bg-[#252525] text-white px-6">
+  <div class="max-w-4xl mx-auto">
+
+    <h2 class="text-[#FF4500] text-4xl font-bold text-center mb-4">Contáctanos</h2>
+    <p class="text-center text-gray-300 mb-10">
+      Agenda tu clase gratuita o solicita más información.
+    </p>
+
+    <form action="enviar.php" method="POST" class="bg-[#1f1f1f] p-8 rounded-xl shadow-xl border border-[#FF4500]/20">
+
+      <label class="block mb-2">Nombre completo</label>
+      <input type="text" name="nombre" class="w-full p-3 rounded bg-[#2b2b2b] mb-6 border-gray-700">
+
+      <label class="block mb-2">Correo electrónico</label>
+      <input type="email" name="email" class="w-full p-3 rounded bg-[#2b2b2b] mb-6 border-gray-700">
+
+      <label class="block mb-2">Teléfono</label>
+      <input type="tel" name="telefono" class="w-full p-3 rounded bg-[#2b2b2b] mb-6 border-gray-700">
+
+      <label class="block mb-2">Mensaje</label>
+      <textarea name="mensaje" rows="5" class="w-full p-3 rounded bg-[#2b2b2b] mb-6 border-gray-700"></textarea>
+
+      <button class="w-full bg-[#FF4500] py-3 rounded font-bold hover:bg-red-600 transition">
+        Enviar mensaje
+      </button>
+
     </form>
-  </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-info">
-      <p>&copy; 2025 TuGimnasio. Todos los derechos reservados.</p>
-      <p><a href="https://www.tugimnasio.com/politica-privacidad">Política de Privacidad</a> | <a href="https://www.tugimnasio.com/terminos">Términos y Condiciones</a></p>
+  </div>
+</section>
+
+  <!-- FOOTER -->
+<footer class="bg-[#1b1b1b] text-white py-8">
+  <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-6 text-center md:text-left">
+
+    <div>
+      <p class="text-gray-400">&copy; 2025 TuGimnasio. Todos los derechos reservados.</p>
+      <p class="mt-2 text-gray-300">
+        <a href="#" class="hover:text-[#FF4500]">Política de Privacidad</a> |
+        <a href="#" class="hover:text-[#FF4500]">Términos y Condiciones</a>
+      </p>
     </div>
-    <div class="footer-social">
-      <a href="#" aria-label="Facebook">Facebook</a>
-      <a href="#" aria-label="Instagram">Instagram</a>
-      <a href="#" aria-label="YouTube">YouTube</a>
+
+    <div class="flex justify-center md:justify-end space-x-6">
+      <a href="#" class="hover:text-[#FF4500]">Facebook</a>
+      <a href="#" class="hover:text-[#FF4500]">Instagram</a>
+      <a href="#" class="hover:text-[#FF4500]">YouTube</a>
     </div>
-  </footer>
+
+  </div>
+</footer>
 
 </body>
 </html>
